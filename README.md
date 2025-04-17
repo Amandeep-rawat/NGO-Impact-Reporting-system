@@ -56,18 +56,22 @@ With more time, I would add authentication, more detailed reporting features, da
 
 ### 1. Clone the repository
 
-### 2. step to run the fontend
+### 2. Step to run the frontend
+```bash
 npm install --legacy-peer-deps
 npm run dev
+```
 
-
-### 3.  step to run the backend 
+### 3. Step to run the backend
+```bash
 cd backend
 npm install
 npm run dev
+```
 
-### 4.  env variables 
+### 4.  env variables
+```bash 
 MONGO_URI=your_mongodb_connection_string
 NODE_ENV= development for dev and for production use production
 PORT=any port number
-
+```
