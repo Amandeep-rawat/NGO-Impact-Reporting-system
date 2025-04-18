@@ -45,8 +45,8 @@ export default function AdminDashboard() {
       try {
         const url =
           month === "all"
-            ? "http://localhost:5000/api/dashboard-all"
-            : `http://localhost:5000/api/dashboard?month=${month}`
+            ? `${process.env.NEXT_PUBLIC_API_URL}/api/dashboard-all`
+            : `${process.env.NEXT_PUBLIC_API_URL}/api/dashboard?month=${month}`
     
         const response = await fetch(url)
     
