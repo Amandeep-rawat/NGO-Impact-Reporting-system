@@ -11,7 +11,19 @@ const app = express()
 const PORT = process.env.PORT || 5000
 
 // Middleware
-app.use(cors())
+const allowedOrigins = [
+  "http://localhost:3000", // for local dev
+  "https://ngo-impact-reporting-system-frontend.vercel.app", // frontend production
+]
+
+app.use(
+  cors({
+    origin: allowedOrigins, // directly pass the array
+    credentials: true,
+  })
+)
+
+
 app.use(express.json())
 
 // Connect to MongoDB
