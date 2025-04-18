@@ -11,17 +11,13 @@ const app = express()
 const PORT = process.env.PORT || 5000
 
 // Middleware
-const allowedOrigins = [
-  "http://localhost:3000", // for local dev
-  "https://ngo-impact-reporting-system-frontend.vercel.app", // frontend production
-]
-
 app.use(
   cors({
-    origin: allowedOrigins, // directly pass the array
+    origin: "*", // allow all origins
     credentials: true,
   })
 )
+
 
 
 app.use(express.json())
